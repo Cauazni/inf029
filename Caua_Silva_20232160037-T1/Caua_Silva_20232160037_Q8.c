@@ -22,6 +22,8 @@
 
 // #################################################
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -32,9 +34,13 @@ char jogador1[TAM_TABULEIRO][TAM_TABULEIRO];
 char jogador2[TAM_TABULEIRO][TAM_TABULEIRO];
 
 int num_navios = NUM_NAVIOS;
+
+
+
 void limpar_console() {
     system("clear");
 }
+
 void inicializar_tabuleiros() {
     for (int i = 0; i < TAM_TABULEIRO; i++) {
         for (int j = 0; j < TAM_TABULEIRO; j++) {
@@ -43,6 +49,7 @@ void inicializar_tabuleiros() {
         }
     }
 }
+
 void listar_tabuleiro(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int mostrar_navios) {
     printf("    ");
     for (int i = 0; i < TAM_TABULEIRO; i++) {
@@ -73,6 +80,7 @@ void listar_tabuleiro(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int mostrar_
         printf("\n");
     }
 }
+
 int verificar_posicao_valida(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int linha, int coluna, int tamanho, char direcao) {
     if (direcao == 'h') {
         for (int i = 0; i < tamanho; i++) {
@@ -89,6 +97,7 @@ int verificar_posicao_valida(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int l
     }
     return 1;
 }
+
 void posicionar_navio(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int linha, int coluna, int tamanho, char direcao) {
     if (direcao == 'h') {
         for (int i = 0; i < tamanho; i++) {
@@ -100,6 +109,7 @@ void posicionar_navio(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int linha, i
         }
     }
 }
+
 void disparar(char tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO], int linha, int coluna) {
     if (linha < 0 || linha >= TAM_TABULEIRO || coluna < 0 || coluna >= TAM_TABULEIRO) {
         printf("Tiro inválido.\n");

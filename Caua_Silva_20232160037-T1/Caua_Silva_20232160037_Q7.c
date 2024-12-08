@@ -1,6 +1,11 @@
 #include <stdio.h>
 
 #define TAMANHO_TABULEIRO 3
+
+
+
+
+
 void exibirTabuleiro(char tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     printf("\n  0   1   2  \n");
     printf(" ┌───┬───┬───┐\n");
@@ -15,6 +20,7 @@ void exibirTabuleiro(char tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     }
     printf(" └───┴───┴───┘\n");
 }
+
 int celulaValida(int linha, int coluna, char tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     if (linha < 0 || linha >= TAMANHO_TABULEIRO || coluna < 0 || coluna >= TAMANHO_TABULEIRO) {
         return 0;
@@ -24,6 +30,7 @@ int celulaValida(int linha, int coluna, char tabuleiro[TAMANHO_TABULEIRO][TAMANH
     }
     return 1;
 }
+
 char verificarVencedor(char tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
         if (tabuleiro[i][0] != ' ' && tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][1] == tabuleiro[i][2]) {
@@ -41,6 +48,9 @@ char verificarVencedor(char tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     }
     return ' ';
 }
+
+
+
 
 int main() {
     char tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO];
