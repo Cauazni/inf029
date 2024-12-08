@@ -417,30 +417,8 @@ int q4(char strTexto[], char strBusca[], int posicoes[30]){
 		Número invertido
  */
 
-int q5(int num){
-
-	//refazer pois nao deve usar string
-	// char num_S[6];
-    // sprintf(num_S, "%d\n", num);
-	// char numInvertido_S[6];
-	
-    // int tam = strlen(num_S)-1;
-	// int j = tam-1;
-	// int i = 0;
-
-    // for (; i < tam; i++){ 
-	// 	numInvertido_S[j] = num_S[i];
-	// 	j--;
-	// }
-
-	// if(i > 0){
-	// 	numInvertido_S[i] = '\0';
-	// }
-	
-	// int numInvertido_I = atoi(numInvertido_S);
-    
-	// return numInvertido_I;
-
+int q5(int num)
+{
     int numInvertido = 0;
 
     while (num > 0) {
@@ -462,41 +440,8 @@ int q5(int num){
 		Quantidade de vezes que número de busca ocorre em número base
  */
 
-int q6(int numerobase, int numerobusca){
-	//refazer pois nao deve usar string
-	// int qtdOcorrencias = 0;
-
-	// char num_S[10];
-	// char numBusca_S[10];
-	// sprintf(num_S, "%d\n", numerobase);
-    // sprintf(numBusca_S, "%d\n", numerobusca);
-
-    // int tam_num_S = strlen(num_S)-1;
-	// int tam_numBusca_S = strlen(numBusca_S)-1;
-	
-	// int i = 0;
-
-	// if(i > 0){
-	// 	num_S[tam_num_S] = '\0';
-	// }
-
-	// if(i > 0){
-	// 	numBusca_S[tam_numBusca_S] = '\0';
-	// }
-
-	// for (int i = 0; i <= tam_num_S - tam_numBusca_S; i++) {
-    //     int j;
-    //     // Verificando se a substring de tam_num_S a partir da posição i é igual a tam_numBusca_S
-    //     for (j = 0; j < tam_numBusca_S; j++) {
-    //         if (num_S[i + j] != numBusca_S[j]) {
-    //             break; // Se os caracteres não coincidirem, sai do loop interno
-    //         }
-    //     }
-    //     if (j == tam_numBusca_S) {
-    //         qtdOcorrencias++; // Se todos os caracteres de tam_numBusca_S foram encontrados, incrementa qtdOcorrencias
-    //     }
-    // }
-	// return qtdOcorrencias;
+int q6(int numerobase, int numerobusca)
+    {
 
     int qtdOcorrencias = 0;
 
